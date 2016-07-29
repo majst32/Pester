@@ -8,6 +8,6 @@ Describe "set-KCD" {
     Mock Set-ADAccountControl {return $Null}
     Mock Set-ADObject {return $Null}
 
-       { Set-KCD -ADObject Whatever -SPNs [pscustomobject]@{} } | Should Not Throw
+       { Set-KCD -ADObject Whatever -SPNs [pscustomobject]@{} } | Should Throw
     }
 }
